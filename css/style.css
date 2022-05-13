@@ -1,0 +1,14 @@
+/* Our plans */
+.heading {
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.pricing-grid1_container {
+  padding: 3.5em 2.5em;
+}
