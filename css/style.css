@@ -1,14 +1,62 @@
+body {
+  background-color: #faf7fe;
+  font-family: "Jost", sans-serif;
+}
+
 /* Our plans */
+
 .heading {
   text-align: center;
+}
+.pricing_title1 {
+  color: red;
+  font-size: 30px;
+}
+.pricing_title2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  text-transform: capitalize;
 }
 
 .pricing-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+  margin-top: 2em;
 }
 
-.pricing-grid1_container {
-  padding: 3.5em 2.5em;
+.pricing-grid1_container,
+.pricing-grid3_container {
+  padding: 3.5em 2em;
+  background-color: white;
+}
+.pricing-grid2_container {
+  background-color: white;
+}
+.pricing-grid2_top {
+  background-color: #189a46;
+  padding: 3.5em 0em;
+}
+.pricing-grid2_container {
+  box-shadow: 0 5px 15px 0 rgb(17 17 17 / 20%);
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin-left: 10%;
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .pricing-grid {
+    width: 80%;
+    margin-left: 10%;
+    grid-gap: 20px;
+  }
+  .buy-button {
+    display: none;
+  }
 }
