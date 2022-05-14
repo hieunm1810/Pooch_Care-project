@@ -32,6 +32,10 @@
       referrerpolicy="no-referrer"
     />
     <!-- Magnific Popup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -162,30 +166,17 @@
         </div>
         <div class="nutrition-video">
           <img src="./image/banner2.jpg" class="nutrition-img" />
-
-          <a href="#nutrition-clip" class="video-play-icon">
+          <a class="video" href="https://player.vimeo.com/video/101587706">
             <span class="bg-icon">
-              <span><i class="fas fa-play"></i></span>
-            </span>
-          </a>
-
-          <div id="nutrition-clip">
-            <iframe
-              src="https://player.vimeo.com/video/101587706"
-              allowfullscreen
-            ></iframe>
-            <img src="./image/close.png.png" class="close" />
-          </div>
+              <span><i class="fas fa-play"></i></span> </span
+          ></a>
         </div>
       </div>
     </section>
     <!-- TESTIMONIALS -->
     <!-- footer -->
 
-    <!-- Magnific Popup -->
-
     <!-- SCRIPT -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -196,5 +187,48 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Magnific Popup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".video").magnificPopup({
+          type: "iframe",
+          iframe: {
+            markup:
+              '<div class="mfp-iframe-scaler">' +
+              '<div class="mfp-close"></div>' +
+              '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+              "</div>", // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+            patterns: {
+              youtube: {
+                index: "youtube.com/", // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                id: "v=", // String that splits URL in a two parts, second part should be %id%
+                // Or null - full URL will be returned
+                // Or a function that should return %id%, for example:
+                // id: function(url) { return 'parsed id'; }
+
+                src: "//www.youtube.com/embed/%id%?autoplay=1", // URL that will be set as a source for iframe.
+              },
+              vimeo: {
+                index: "vimeo.com/",
+                id: "/",
+                src: "https://player.vimeo.com/video/%id%?autoplay=1",
+              },
+              gmaps: {
+                index: "//maps.google.",
+                src: "%id%&output=embed",
+              },
+
+              // you may add here more sources
+            },
+
+            srcAction: "iframe_src", // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+          },
+        });
+      });
+    </script>
   </body>
 </html>
