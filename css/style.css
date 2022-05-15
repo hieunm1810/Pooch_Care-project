@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+@import url('https://css.gg/moon.css');
+
+:root {
+    --color1: #189A46;
+    --color2: #000c04;
+    --color3: #f53626;
+}
+
+html,
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 62.5%;
+    color: #696969;
+}
+
+body {
+    position: relative;
+}
+
+.text-muted {
+    color: var(--color1)!important;
+}
+
+/* HEADER */
+.header {
+    background-color: #ffff;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.header>i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-135deg);
+    right: 19%;
+}
+.header .navbar-brand {
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+
+.header .navbar .navbar-nav {
+    gap: 2rem;    
+}
+
+.header .navbar .navbar-nav .nav-link {
+    color: var(--color2);
+    font-size: 1.92rem;
+}
+
+.header .navbar .nav-item {
+    position: relative;
+}
+
+.header .navbar .nav-item::after {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background-color: var(--color1);    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.header .navbar .nav-item:hover::after {
+    width: 100%;
+}
+
+.header .navbar .nav-item .nav-link {
+    transition: all 1s;
+}
+
+.header .navbar .nav-item.active .nav-link {
+    color: var(--color1);
+}
+
+.header .navbar .nav-item:hover .nav-link {
+    color: var(--color1);
+}
+
+.header .dropdown-toggle::after {
+    display: none;
+}
+
+.header .dropdown-toggle {
+    gap: 2px;
+}
+
+.header .dropdown-toggle i {
+    font-size: 1rem;
+}
+
+.header .dropdown-menu {
+    border-radius: 1rem;
+    font-size: 1.92rem;
+    padding: 1.5rem 6rem 1rem 2.5rem;
+    left: -100%;
+}
+
+.header .dropdown-item {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0;
+    background-color: transparent;
+}
+
+.header .dropdown-item::after {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background-color: var(--color1);    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.header .dropdown-item:hover::after {
+    width: 100%;
+}
+
+
