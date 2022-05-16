@@ -4,7 +4,7 @@ body {
 }
 
 .spacing-section {
-  margin-bottom: 3em;
+  margin-bottom: 10em;
 }
 /* Our plans */
 
@@ -45,14 +45,17 @@ body {
   box-shadow: 0 5px 15px 0 rgb(17 17 17 / 20%);
 }
 
-@media (max-width: 768px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    width: 80%;
-    margin-left: 10%;
-    grid-gap: 20px;
-  }
+.buy-button {
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #189a46;
+  border-color: #189a46;
+  width: 30%;
+  margin-left: 35%;
 }
+
 @media (max-width: 992px) {
   .pricing-grid {
     width: 80%;
@@ -61,6 +64,15 @@ body {
   }
   .buy-button {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin-left: 10%;
+    grid-gap: 20px;
   }
 }
 
@@ -79,7 +91,7 @@ body {
   font-weight: 600;
   font-size: 40px;
 }
-.nutrition-text p {
+.nutrition-text h4 {
   font-size: 20px;
 }
 
@@ -110,19 +122,6 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-@media (max-width: 768px) {
-  .nutrition-text h6 {
-    color: red;
-    font-size: 18px;
-  }
-  .nutrition-text h3 {
-    font-weight: 600;
-    font-size: 25px;
-  }
-  .nutrition-text p {
-    font-size: 13px;
-  }
-}
 @media (max-width: 992px) {
   .nutrition-text h6 {
     color: red;
@@ -132,7 +131,209 @@ body {
     font-weight: 600;
     font-size: 35px;
   }
-  .nutrition-text p {
+  .nutrition-text h4 {
     font-size: 25px;
   }
+}
+
+@media (max-width: 768px) {
+  .nutrition-text h6 {
+    color: red;
+    font-size: 18px;
+  }
+  .nutrition-text h3 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .nutrition-text h4 {
+    font-size: 13px;
+  }
+}
+
+/* testimonials */
+.testimonials {
+  background-color: #faf7fe;
+}
+.testimonials-header {
+  text-align: center;
+}
+.testimonials-header h6 {
+  color: red;
+  font-size: 25px;
+}
+.testimonials-header h3 {
+  font-weight: 600;
+  font-size: 40px;
+}
+.container-item {
+  background-color: white;
+}
+.item {
+  padding: 20px;
+  box-shadow: 0 5px 15px 0 rgb(17 17 17 / 10%);
+}
+.item h4 {
+  font-size: 20px;
+  color: grey;
+}
+.testimonials_image-text {
+  display: flex;
+  margin-top: 20px;
+}
+
+.image-text_image {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  overflow: hidden;
+  background: white;
+  border-radius: 50%;
+}
+.image-text_text {
+  margin-left: 20px;
+}
+.owl-nav {
+  display: none;
+}
+.owl-dots {
+  margin-top: 20px;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span .owl-theme .owl-dots .owl-dot span {
+  background: #189a46;
+  width: 30px;
+  height: 10px;
+}
+@media (max-width: 992px) {
+  .testimonials-header h6 {
+    color: red;
+    font-size: 20px;
+  }
+  .testimonials-header h3 {
+    font-weight: 600;
+    font-size: 35px;
+  }
+  .item h4 {
+    font-size: 15px;
+    color: grey;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials-header h6 {
+    font-size: 18px;
+  }
+  .testimonials-header h3 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .item h4 {
+    font-size: 10px;
+    color: grey;
+  }
+}
+
+/* Subscribe */
+.subscribe {
+  background-color: white;
+}
+.subscribe-container {
+  margin: 0 15%;
+}
+.subscribe-text {
+  text-align: center;
+}
+.subscribe-text h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.subscribe-text h4 {
+  font-size: 20px;
+  color: grey;
+  margin: 20px 0;
+}
+
+.subscribe-input {
+  display: flex;
+}
+.form-control {
+  font-size: 16px;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.subscribe-btn {
+  font-size: 18px;
+  line-height: 28px;
+  border-color: #189a46;
+  background-color: #189a46;
+  border-radius: 15px;
+  color: white;
+  width: 25%;
+  margin-left: 5%;
+}
+
+@media (max-width: 992px) {
+  .subscribe-container {
+    margin: 0 10%;
+  }
+  .subscribe-text h3 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .subscribe-input {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-control {
+    font-size: 16px;
+    height: 60px;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .subscribe-btn {
+    font-size: 18px;
+    line-height: 45px;
+    border-color: #189a46;
+    background-color: #189a46;
+    border-radius: 15px;
+    color: white;
+    width: 30%;
+    margin-left: 35%;
+  }
+  .subscribe-text h4 {
+    font-size: 18px;
+    color: grey;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .subscribe-text h3 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .subscribe-btn {
+    font-size: 18px;
+    line-height: 45px;
+    border-color: #189a46;
+    background-color: #189a46;
+    border-radius: 15px;
+    color: white;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+}
+
+/* footer */
+
+.footer .container {
+  max-width: 100%;
+}
+
+.container .row {
+  padding-top: 3em;
+}
+
+.text-grey {
+  color: grey !important ;
 }
