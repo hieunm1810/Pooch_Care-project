@@ -26,9 +26,11 @@ body {
 .header {
     background-color: #ffff;
     position: fixed;
-    top: 3rem;
+    top: 3.5rem;
     left: 0;
     right: 0;
+    z-index: 10;
+    padding: 1rem 0;
 }
 
 .header>i {
@@ -122,5 +124,98 @@ body {
 .header .dropdown-item:hover::after {
     width: 100%;
 }
+
+/* CAROUSEL */
+.carousel .carousel-inner .carousel-item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.carousel .carousel-inner .carousel-item img {
+    height: 95vh;
+    object-fit: cover;
+}
+
+.carousel__intro {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 5;
+    text-transform: capitalize;
+    padding-right: 10rem;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.carousel__intro p:first-child {
+    font-size: 6.6rem;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.carousel__intro p:nth-child(2) {
+    font-size: 1.92rem;
+    margin-bottom: 4rem;
+}
+
+.carousel__btn {
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    transition: all .5s;
+}
+
+.carousel__btn:hover {
+    color: var(--color1);
+    background-color: #fff;
+}
+
+.carousel__btn--active {
+    color: var(--color1);
+    background-color: #fff;
+}
+
+.carousel__btn--mr {
+    margin-right: 1rem;
+}
+
+.carousel__intro--left25 {
+    left:25%;
+}
+
+.carousel__intro--left45 {
+    left: 45%;
+}
+
+.carousel .carousel-indicators {
+    bottom: 3rem;
+}
+
+.carousel .carousel-indicators li {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    border: none;
+    opacity: .8;
+}
+
+.carousel .carousel-indicators li.active {
+    width: 3rem;
+    background-color: var(--color1);
+    border-radius: 1rem;
+}
+
 
 
