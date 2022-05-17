@@ -40,6 +40,21 @@ body {
 .pricing-grid2_top {
   background-color: #189a46;
   padding: 3.5em 0em;
+  color: white;
+}
+
+.pricing-save {
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  color: #189a46;
+  background-color: white;
+  width: 30%;
+  margin-left: 35%;
+  margin-bottom: 5%;
+}
+.standard-package {
+  font-size: 30px;
 }
 .pricing-grid2_container {
   box-shadow: 0 5px 15px 0 rgb(17 17 17 / 20%);
@@ -336,4 +351,8 @@ body {
 
 .text-grey {
   color: grey !important ;
+}
+
+.text-red {
+  color: red !important;
 }
