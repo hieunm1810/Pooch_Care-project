@@ -34,6 +34,7 @@ body {
     text-align: center;
     line-height: 5rem;
     z-index: 21;
+    cursor: pointer;
 }
 
 .backToTop {
@@ -91,6 +92,12 @@ body {
     align-items: center;
     margin-bottom: 2rem;
     opacity: 0.5;
+    transition: all .25s;
+}
+
+.sidebar__control ul li:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 .sidebar__control li i {
