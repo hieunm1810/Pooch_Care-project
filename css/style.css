@@ -14,6 +14,7 @@ body {
 .pricing_title1 {
   color: red;
   font-size: 25px;
+  font-weight: bolder;
 }
 .pricing_title2 {
   font-size: 40px;
@@ -31,16 +32,60 @@ body {
 
 .pricing-grid1_container,
 .pricing-grid3_container {
-  padding: 3.5em 2em;
+  margin-top: 90px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: white;
+}
+
+.pricing-grid1_top_h6,
+.pricing-grid3_top_h6 {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.pricing-text1,
+.pricing-text3 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #189a46;
+  margin-bottom: 60px;
+}
+.pricing-label1,
+.pricing-label3 {
+  font-weight: bolder;
+  font-size: 20px;
+  vertical-align: text-top;
+}
+.pricing-span1,
+.pricing-span3 {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: grey;
+}
+
+.pricing-grid1_bottom,
+.pricing-grid3_bottom {
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 3em;
 }
 .pricing-grid2_container {
   background-color: white;
+  line-height: 2.5em;
+  padding-bottom: 25px;
+  border-radius: 10px;
 }
 .pricing-grid2_top {
+  border-radius: 10px 10px 0 0;
   background-color: #189a46;
   padding: 3.5em 0em;
   color: white;
+}
+.pricing-grid2_bottom {
+  font-size: 18px;
+  padding: 40px 0px;
 }
 
 .pricing-save {
@@ -53,22 +98,39 @@ body {
   margin-left: 35%;
   margin-bottom: 5%;
 }
+.pricing-text2 {
+  margin-top: 35px;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.pricing-span2 {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.pricing-label2 {
+  font-weight: bolder;
+  font-size: 20px;
+  vertical-align: text-top;
+}
 .standard-package {
   font-size: 30px;
 }
+
 .pricing-grid2_container {
-  box-shadow: 0 5px 15px 0 rgb(17 17 17 / 20%);
+  box-shadow: 0 5px 15px 10px rgb(17 17 17 / 20%);
 }
 
 .buy-button {
   font-size: 18px;
   font-weight: 400;
+  line-height: 3em;
   border-radius: 15px;
   color: #fff;
   background-color: #189a46;
   border-color: #189a46;
-  width: 30%;
-  margin-left: 35%;
+  width: 40%;
+  margin-left: 30%;
 }
 
 @media (max-width: 992px) {
@@ -129,6 +191,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  animation: ripple 1s linear infinite;
 }
 .bg-icon i {
   color: green;
@@ -136,6 +199,17 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgb(15 162 66 / 16%), 0 0 0 10px rgb(15 162 67 / 25%),
+      0 0 0 20px rgb(15 162 67 / 25%);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgb(15 162 67 / 25%), 0 0 0 20px rgb(15 162 67 / 25%),
+      0 0 0 40px rgb(50 100 245 / 0%);
+  }
 }
 @media (max-width: 992px) {
   .nutrition-text h6 {
@@ -171,6 +245,17 @@ body {
 }
 .testimonials-header {
   text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials_text {
+  font-size: 50px;
+  color: #189a46;
+  line-height: 0.8;
+  padding-top: 8px;
+  font-weight: 600;
+  display: inline-block;
+  font-family: "Merriweather", serif;
 }
 .testimonials-header h6 {
   color: red;
@@ -206,6 +291,13 @@ body {
 }
 .image-text_text {
   margin-left: 20px;
+}
+.image-text_text h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.image-text_text p {
+  color: grey;
 }
 .owl-nav {
   display: none;
@@ -341,18 +433,30 @@ body {
 
 /* footer */
 
-.footer .container {
-  max-width: 100%;
+.footer-container {
+  background-color: black;
+  color: white;
+}
+.footer-title {
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.ul-color {
+  color: grey;
 }
 
-.container .row {
-  padding-top: 3em;
+.ul-color :hover {
+  color: white;
+  text-decoration: underline;
 }
-
-.text-grey {
-  color: grey !important ;
-}
-
-.text-red {
+.copy-footer a {
   color: red !important;
+}
+
+.buy-button:hover,
+.subscribe-btn:hover {
+  background-color: #08702e;
 }
