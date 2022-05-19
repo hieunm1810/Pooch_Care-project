@@ -698,3 +698,32 @@ body {
         margin-bottom: 5rem !important;
     }
 }
+
+/* VIDEO POPUP */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.video iframe {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.video.stuck {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+    height: 200px;
+    transform: translateY(100%);
+    animation: fade-in-up .25s ease forwards;
+}

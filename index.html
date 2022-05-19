@@ -263,6 +263,15 @@
             </div>
         </section>
     </main>
+    <!-- VIDEO POPUP -->
+    <div class="video__wrap">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hxU9gtORwWU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
 
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -299,6 +308,27 @@
         }
 
         window.addEventListener("scroll", changeCss, false);
+    </script>
+    <script>
+        (function ($) {
+            var $window = $(window);
+            var $videoWrap = $('.video__wrap');
+            var $video = $('.video');
+            var videoHeight = $video.outerHeight();
+
+            $window.on('scroll', function () {
+                var windowScrollTop = $window.scrollTop() + $(window).height();
+                var videoBottom = $videoWrap.offset().top;
+
+                if (videoBottom > windowScrollTop) {
+                    $videoWrap.height(videoHeight);
+                    $video.addClass('stuck');
+                } else {
+                    $videoWrap.height('auto');
+                    $video.removeClass('stuck');
+                }
+            });
+        }(jQuery));
     </script>
 </body>
 

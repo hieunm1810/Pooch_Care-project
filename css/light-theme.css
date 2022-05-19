@@ -60,6 +60,7 @@ body {
 .cd-top--is-visible {
     visibility: visible;
 }
+
 /* SIDEBAR */
 .sidebar {
     position: fixed;
@@ -136,6 +137,7 @@ body {
 .header .navbar>.btn__toggle i.gg-sun {
     display: none;
 }
+
 .header .text-muted {
     color: var(--color1) !important;
 }
@@ -687,8 +689,38 @@ body {
 .count p.mb-5 {
     margin-bottom: 0 !important;
 }
+
 @media only screen and (max-width:991px) {
     .count p.mb-5 {
         margin-bottom: 5rem !important;
     }
+}
+
+/* VIDEO POPUP */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.video iframe {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.video.stuck {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+    height: 200px;
+    transform: translateY(100%);
+    animation: fade-in-up .25s ease forwards;
 }
