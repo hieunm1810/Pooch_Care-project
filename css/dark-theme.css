@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
 @import url('https://css.gg/moon.css');
+@import url('https://css.gg/sun.css');
 
 :root {
     --color1: #189A46;
-    --color2: #000c04;
+    --color2: #dddddd;
     --color3: #f53626;
 }
 
@@ -11,18 +12,19 @@ html,
 body {
     font-family: 'Jost', sans-serif;
     font-size: 62.5%;
-    color: #696969;
+    color: #afafaf;
     margin: 0;
 }
 
 body {
     position: relative;
+    background-color: #151515;
 }
 
 .icon--sidebar {
     position: fixed;
     right: 18.945px;
-    top: 7.2rem;
+    top: 6.2rem;
     font-size: 2.6rem;
     color: #fff;
     display: inline-block;
@@ -59,6 +61,7 @@ body {
 .cd-top--is-visible {
     visibility: visible;
 }
+
 /* SIDEBAR */
 .sidebar {
     position: fixed;
@@ -106,13 +109,14 @@ body {
 
 /* HEADER */
 .header {
-    background-color: #ffff;
+    background-color: #151515;
     position: fixed;
     top: 3.5rem;
     left: 0;
     right: 0;
     z-index: 20;
     padding: 1rem 0;
+    transition: all .5s;
 }
 
 .header .header__wrap .container {
@@ -125,9 +129,14 @@ body {
     padding-right: 0;
 }
 
-.header .navbar>i {
+.header .navbar>.btn__toggle {
     position: absolute;
     right: 0;
+    cursor: pointer;
+}
+
+.header .navbar>.btn__toggle i.gg-moon {
+    display: none;
 }
 
 .header .text-muted {
@@ -199,20 +208,21 @@ body {
     padding: 1.5rem 6rem 1rem 2.5rem;
     left: -100%;
     top: 140%;
+    background-color: #151515;
+    border: 1px solid #333;
 }
 
 .header .dropdown-menu::after {
     content: "";
     width: 2rem;
     height: 2rem;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    border-left: 1px solid #ddd;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
     position: absolute;
     top: -1rem;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
-
+    background-color: #151515;
 }
 
 .header .dropdown-item {
@@ -220,6 +230,7 @@ body {
     position: relative;
     padding-left: 0;
     background-color: transparent;
+    color: #dddddd;
 }
 
 .header .dropdown-item::after {
@@ -250,7 +261,7 @@ body {
         display: none;
     }
 
-    .header .navbar>i {
+    .header .navbar>.btn__toggle {
         top: 2.5rem;
         right: 5rem;
     }
@@ -500,7 +511,7 @@ body {
 
 /* SERVICES */
 .services {
-    background-color: rgba(147, 107, 232, 0.05);
+    background-color: #222222;
 }
 
 .services__wrap {
@@ -508,14 +519,15 @@ body {
 }
 
 .services__card {
-    background-color: #fff;
+    background-color: #151515;
     padding: 4rem 3rem;
     transition: all .5s;
     width: 100%;
+    border-radius: 1rem;
 }
 
 .services__card:hover {
-    background-color: rgba(147, 107, 232, 0.05);
+    background-color: #222222;
 }
 
 .services__card i {
@@ -611,7 +623,7 @@ body {
 .reason__info p:nth-child(3) {
     font-size: 1.6rem;
     margin-bottom: 3rem;
-    color: #696969;
+    color: #afafaf;
     font-weight: 400;
 }
 
@@ -658,5 +670,31 @@ body {
 @media only screen and (max-width:575px) {
     .reason__wrap.container {
         max-width: 50rem;
+    }
+}
+
+/* COUNT */
+.count {
+    color: #fff;
+    background-color: var(--color1);
+    padding: 5rem 0;
+}
+
+.count .count__number {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.count .count__text {
+    font-size: 2rem;
+}
+
+.count p.mb-5 {
+    margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width:991px) {
+    .count p.mb-5 {
+        margin-bottom: 5rem !important;
     }
 }

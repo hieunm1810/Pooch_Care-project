@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/light-theme.css" id="theme-link">
 </head>
 
 <body>
@@ -71,7 +71,10 @@
                             </li>
                         </ul>
                     </div>
-                    <i class="gg-moon"></i>
+                    <div class="btn__toggle">
+                        <i class="gg-moon"></i>
+                        <i class="gg-sun"></i>
+                    </div>
                 </nav>
             </div>
 
@@ -244,17 +247,59 @@
                 </div>
             </div>
         </div>
+        <!-- COUNT -->
+        <section class="count">
+            <div class="container">
+                <div class="row">
+                    <p class="col-lg-3 col-6 d-flex flex-column align-items-center mb-5"><span
+                            class="count__number counter">730</span> <span class="count__text">Happy Clients</span></p>
+                    <p class="col-lg-3 col-6 d-flex flex-column align-items-center mb-5"><span
+                            class="count__number counter">80</span> <span class="count__text">Professionals</span></p>
+                    <p class="col-lg-3 col-6 d-flex flex-column align-items-center"><span
+                            class="count__number counter">812</span> <span class="count__text">Adopted Pets</span></p>
+                    <p class="col-lg-3 col-6 d-flex flex-column align-items-center"><span
+                            class="count__number counter">90</span> <span class="count__text">Awards</span></p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+        integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
     <script src="./libs/backToTop/assets/js/main.js"></script>
     <script src="./libs/backToTop/assets/js/util.js"></script>
+    <script src="./libs/countup/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <script>
+        const btn = document.querySelector(".btn__toggle");
+        const theme = document.querySelector("#theme-link");
+        btn.addEventListener("click", function () {
+            if (theme.getAttribute("href") == "./css/light-theme.css") {
+                theme.href = "./css/dark-theme.css";
+            } else {
+                theme.href = "./css/light-theme.css";
+            }
+        });
+    </script>
+    <script>
+        function changeCss() {
+            var bodyElement = document.querySelector("body");
+            var headerElement = document.querySelector(".header");
+            this.scrollY > 200 ? headerElement.style.padding = "0.5rem 0" : headerElement.style.padding = "1rem 0";
+        }
+
+        window.addEventListener("scroll", changeCss, false);
+    </script>
 </body>
 
 </html>
