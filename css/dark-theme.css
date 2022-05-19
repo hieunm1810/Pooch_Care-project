@@ -710,6 +710,9 @@ body {
         opacity: 1;
     }
 }
+.video {
+    position: relative;
+}
 
 .video iframe {
     max-width: 100%;
@@ -726,4 +729,24 @@ body {
     height: 200px;
     transform: translateY(100%);
     animation: fade-in-up .25s ease forwards;
+}
+
+.video .close {
+    position: absolute;
+    top: -14px;
+    right: -12px;
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    color: #fff;
+    line-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+}
+
+.video.btn__visible .close{
+    display: block;
 }

@@ -322,10 +322,23 @@
 
                 if (videoBottom > windowScrollTop) {
                     $videoWrap.height(videoHeight);
-                    $video.addClass('stuck');
+                    if (!$video.hasClass('closed')) {
+                        $video.addClass('stuck');
+                        if (!$video.hasClass('btn__visible')) {
+                            $video.append('<span class="close">X<span/>').addClass('btn__visible');
+                        }
+                        $close = $video.find('.close');
+                        $close.on('click', function () {
+                            $video.removeClass('stuck');
+                            $video.addClass('closed');
+                            $('.close').remove();
+                        });
+                    }
                 } else {
                     $videoWrap.height('auto');
                     $video.removeClass('stuck');
+                    $video.removeClass('closed');
+                    $video.removeClass('btn__visible');
                 }
             });
         }(jQuery));
